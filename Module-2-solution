@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Responsive Page</title>
+</head>
+
+<body>
+  <h1>Responsive Page</h1>
+  <div class="container">
+    <div class="section">
+      <div class="section-title">Chicken</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="section">
+      <div class="section-title">Beef</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="section">
+      <div class="section-title">Sushi</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</body>
+
+</html>
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.container {
+  margin: 20px;
+}
+
+.section {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff8080;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+  .section {
+    width: 33.33%;
+    float: left;
+  }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: 50%;
+    float: left;
+  }
+  .section:nth-child(3) {
+    clear: both;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .section {
+    width: 100%;
+  }
+}
